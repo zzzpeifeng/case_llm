@@ -1,9 +1,10 @@
 import json
+import os
 
 from openai import OpenAI
 
 # 初始化客户端 (需要提前设置环境变量 OPENAI_API_KEY，或在此处传入)
-client = OpenAI(api_key="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",
+client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"),
                 base_url="https://openrouter.ai/api/v1")
 
 

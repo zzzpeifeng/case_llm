@@ -99,7 +99,7 @@ class ReActAgent:
     def get_api_key() -> str:
         """Load the API key from an environment variable."""
         load_dotenv()
-        api_key = '32e47e40ee404301b47c79bf8eb780b5.nAcRIEYRYETXbB0t'
+        api_key = os.getenv("OPENROUTER_API_KEY")
         if not api_key:
             raise ValueError("未找到 OPENROUTER_API_KEY 环境变量，请在 .env 文件中设置。")
         return api_key
