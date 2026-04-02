@@ -19,7 +19,7 @@ class ReActAgent:
         self.model = model
         self.project_directory = project_directory
         self.client = OpenAI(
-            base_url="https://open.bigmodel.cn/api/coding/paas/v4",
+            base_url=os.getenv('Z_BASE_URL'),
             api_key=ReActAgent.get_api_key(),
         )
 
@@ -99,7 +99,7 @@ class ReActAgent:
     def get_api_key() -> str:
         """Load the API key from an environment variable."""
         load_dotenv()
-        api_key = os.getenv("OPENROUTER_API_KEY")
+        api_key = os.getenv("Z_API_KEY")
         if not api_key:
             raise ValueError("未找到 OPENROUTER_API_KEY 环境变量，请在 .env 文件中设置。")
         return api_key
@@ -230,7 +230,7 @@ def main(project_directory):
     project_dir = os.path.abspath(project_directory)
 
     tools = [read_file, write_to_file, run_terminal_command]
-    agent = ReActAgent(tools=tools, model="glm-5v-turbo", project_directory=project_dir)
+    agent = ReActAgent(tools=tools, model=os.getenv('Z_MODEL'), project_directory=project_dir)
 
     task = input("请输入任务：")
 
