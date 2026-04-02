@@ -1,0 +1,38 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="18">
+            <item index="0" class="java.lang.String" itemvalue="alibabacloud_darabonba_array" />
+            <item index="1" class="java.lang.String" itemvalue="alibabacloud_openapi_util" />
+            <item index="2" class="java.lang.String" itemvalue="pyproject_hooks" />
+            <item index="3" class="java.lang.String" itemvalue="alibabacloud_endpoint_util" />
+            <item index="4" class="java.lang.String" itemvalue="alibabacloud_tea_util" />
+            <item index="5" class="java.lang.String" itemvalue="alibabacloud_darabonba_encode_util" />
+            <item index="6" class="java.lang.String" itemvalue="alibabacloud_gateway_spi" />
+            <item index="7" class="java.lang.String" itemvalue="alibabacloud_darabonba_signature_util" />
+            <item index="8" class="java.lang.String" itemvalue="pydantic_core" />
+            <item index="9" class="java.lang.String" itemvalue="readme_renderer" />
+            <item index="10" class="java.lang.String" itemvalue="alibabacloud_gateway_pop" />
+            <item index="11" class="java.lang.String" itemvalue="sl-pos2-api" />
+            <item index="12" class="java.lang.String" itemvalue="typing_extensions" />
+            <item index="13" class="java.lang.String" itemvalue="alibabacloud_tea_openapi" />
+            <item index="14" class="java.lang.String" itemvalue="alibabacloud_darabonba_map" />
+            <item index="15" class="java.lang.String" itemvalue="pyasn1_modules" />
+            <item index="16" class="java.lang.String" itemvalue="mitmproxy_rs" />
+            <item index="17" class="java.lang.String" itemvalue="PyQt5_sip" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
