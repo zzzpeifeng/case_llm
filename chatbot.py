@@ -3,9 +3,13 @@ import os
 
 from openai import OpenAI
 
+
+from dotenv import load_dotenv
+load_dotenv()
+
 # 初始化客户端 (需要提前设置环境变量 OPENAI_API_KEY，或在此处传入)
-client = OpenAI(api_key=os.getenv("OPENROUTER_API_KEY"),
-                base_url=os.getenv("OPENROUTER_BASE_URL"))
+client = OpenAI(api_key=os.getenv("Z_API_KEY"),
+                base_url=os.getenv("Z_BASE_URL"))
 
 
 # 2. 定义 Agent 可以使用的“工具库”
@@ -47,7 +51,7 @@ def run_agent(user_prompt):
     for i in range(max_turns):
         print(f"Thoughts: {messages}"f"[{i + 1}/{max_turns}] 🤔 模型正在思考...")
         response = client.chat.completions.create(
-            model=os.getenv("MI_MODEL"),
+            model=os.getenv("Z_MODEL"),
             messages=messages,
             tools=tools,
             max_tokens=11843

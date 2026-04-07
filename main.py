@@ -2,10 +2,12 @@ from dataclasses import dataclass
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.memory import InMemorySaver
-import json
 from langchain.tools import tool, ToolRuntime
 import os
+from dotenv import load_dotenv
 
+
+load_dotenv()
 checkpointer = InMemorySaver()
 
 

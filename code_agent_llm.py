@@ -11,7 +11,8 @@ from openai import OpenAI
 import platform
 
 from prompt_template import react_system_prompt_template
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class ReActAgent:
     def __init__(self, tools: List[Callable], model: str, project_directory: str):
